@@ -1,192 +1,310 @@
+
+---
 # ❤️ Heart Attack Prediction using Machine Learning
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python" />
-  <img src="https://img.shields.io/badge/Jupyter-Notebook-orange?style=for-the-badge&logo=jupyter" />
-  <img src="https://img.shields.io/badge/Scikit--Learn-ML-F7931E?style=for-the-badge&logo=scikitlearn" />
-  <img src="https://img.shields.io/badge/Status-Completed-success?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/License-Educational-green?style=for-the-badge" />
+
+![Python](https://img.shields.io/badge/Python-3.11+-blue?style=for-the-badge\&logo=python)
+![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange?style=for-the-badge\&logo=jupyter)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Machine%20Learning-F7931E?style=for-the-badge\&logo=scikitlearn)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?style=for-the-badge\&logo=pandas)
+![NumPy](https://img.shields.io/badge/NumPy-Numerical%20Computing-013243?style=for-the-badge\&logo=numpy)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-blue?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
+
 </p>
 
 ---
 
-## 📖 About the Project
+# 📖 Project Overview
 
-Heart disease is one of the leading causes of mortality worldwide. Predicting the likelihood of a heart attack at an early stage can assist healthcare professionals in making informed clinical decisions.
+Cardiovascular diseases remain one of the leading causes of death worldwide. Early identification of individuals at risk enables healthcare professionals to recommend preventive measures and improve patient outcomes.
 
-This project applies **Machine Learning** techniques to analyze patient health data and predict the probability of a heart attack based on various medical attributes. The notebook demonstrates the complete machine learning pipeline—from data preprocessing and visualization to model training and performance evaluation.
+This project develops a complete **Machine Learning pipeline** for predicting **Heart Attack Risk** using patient medical records. The workflow covers everything from raw data preprocessing to feature engineering, exploratory data analysis, handling class imbalance, model training, evaluation, and prediction.
 
----
-
-## 🎯 Objectives
-
-- Analyze patient health records.
-- Understand feature relationships through data visualization.
-- Build an accurate predictive model.
-- Evaluate model performance using standard classification metrics.
-- Demonstrate a complete end-to-end Machine Learning workflow.
+The objective is to demonstrate an end-to-end machine learning solution following industry-standard practices.
 
 ---
 
-## ✨ Key Features
+# 🚀 Project Highlights
 
-✅ Data Cleaning & Preprocessing
-
-✅ Exploratory Data Analysis (EDA)
-
-✅ Feature Engineering
-
-✅ Data Visualization
-
-✅ Machine Learning Model Training
-
-✅ Performance Evaluation
-
-✅ Prediction of Heart Attack Risk
-
----
-
-## 🧰 Tech Stack
-
-| Category | Technologies |
-|----------|--------------|
-| Programming Language | Python |
-| Notebook | Jupyter Notebook |
-| Data Processing | Pandas, NumPy |
-| Data Visualization | Matplotlib, Seaborn |
-| Machine Learning | Scikit-learn |
+* ✅ Complete Data Cleaning Pipeline
+* ✅ Feature Engineering
+* ✅ Blood Pressure Feature Extraction
+* ✅ One-Hot Encoding
+* ✅ Label Encoding
+* ✅ Exploratory Data Analysis (EDA)
+* ✅ Correlation Analysis
+* ✅ Feature Selection
+* ✅ Class Imbalance Handling
+* ✅ Feature Scaling
+* ✅ Machine Learning Model Training
+* ✅ Performance Evaluation
+* ✅ Prediction of Heart Attack Risk
 
 ---
 
-## 📂 Project Structure
+# 🧠 Machine Learning Workflow
 
 ```
-Heart_Attack_prediction/
+Raw Dataset
+      │
+      ▼
+Data Cleaning
+      │
+      ▼
+Feature Engineering
+      │
+      ▼
+Exploratory Data Analysis
+      │
+      ▼
+Feature Encoding
+      │
+      ▼
+Correlation Analysis
+      │
+      ▼
+Feature Selection
+      │
+      ▼
+Handling Class Imbalance
+(RandomOverSampler)
+      │
+      ▼
+Feature Scaling
+(MinMaxScaler)
+      │
+      ▼
+Train/Test Split
+      │
+      ▼
+Model Training
+      │
+      ▼
+Performance Evaluation
+      │
+      ▼
+Heart Attack Risk Prediction
+```
+
+---
+
+# 📂 Project Structure
+
+```text
+Heart_Attack_Prediction/
 │
 ├── Heart_Attack_prediction.ipynb
-├── heart.csv
+├── heart_attack_prediction_dataset.csv
+├── heart_attack_prediction_dataset_after_cleaning.csv
 ├── README.md
-└── requirements.txt (Optional)
+└── requirements.txt
 ```
 
 ---
 
-## 🔄 Machine Learning Workflow
+# 📊 Dataset Information
 
-### 📌 1. Data Collection
-- Load the heart disease dataset.
+The dataset contains multiple medical and lifestyle attributes including:
 
-### 📌 2. Data Preprocessing
-- Handle missing values
-- Check data types
-- Remove inconsistencies
-- Prepare features
+* Age
+* Gender
+* Cholesterol
+* Blood Pressure
+* Heart Rate
+* Diabetes
+* Smoking
+* Obesity
+* Alcohol Consumption
+* Exercise Hours
+* Diet
+* Previous Heart Problems
+* Medication Usage
+* Stress Level
+* BMI
+* Triglycerides
+* Physical Activity
+* Sleep Hours
+* Country
 
-### 📌 3. Exploratory Data Analysis
-- Distribution plots
-- Correlation analysis
-- Feature comparison
-- Statistical insights
+**Target Variable**
 
-### 📌 4. Feature Selection
-- Select the most relevant features influencing prediction.
+```
+Heart Attack Risk
 
-### 📌 5. Model Building
-Train the machine learning model using processed data.
-
-### 📌 6. Model Evaluation
-Evaluate using multiple performance metrics.
-
-### 📌 7. Prediction
-Predict whether a patient is likely to experience a heart attack.
-
----
-
-## 📊 Evaluation Metrics
-
-The model performance is evaluated using:
-
-- ✅ Accuracy
-- ✅ Precision
-- ✅ Recall
-- ✅ F1 Score
-- ✅ Confusion Matrix
-- ✅ ROC-AUC Score
+0 → Low Risk
+1 → High Risk
+```
 
 ---
 
-## 📈 Dataset Information
+# 🛠 Data Preprocessing
 
-The dataset contains important medical attributes such as:
+The notebook performs extensive preprocessing before training the model.
 
-- Age
-- Gender
-- Chest Pain Type
-- Resting Blood Pressure
-- Cholesterol Level
-- Fasting Blood Sugar
-- Resting ECG Results
-- Maximum Heart Rate
-- Exercise-Induced Angina
-- ST Depression
-- Slope of Peak Exercise
-- Number of Major Vessels
-- Thalassemia
+### ✔ Data Cleaning
 
-These clinical features are used to determine the likelihood of heart disease.
+* Duplicate removal
+* Missing value verification
+* Data type validation
 
+### ✔ Feature Engineering
+
+Several features were transformed into machine-learning-friendly formats.
+
+Examples include:
+
+* Blood Pressure
+
+```
+158/88
+
+↓
+
+Systolic Pressure = 158
+Diastolic Pressure = 88
+```
+
+* Gender
+
+```
+Male → 1
+Female → 0
+```
+
+* Diet
+
+```
+Healthy
+Average
+Unhealthy
+
+↓
+
+2
+1
+0
+```
 
 ---
 
-## 📸 Project Highlights
+# 📈 Exploratory Data Analysis
 
-✔ Clean and organized workflow
+The project includes various visualization techniques such as:
 
-✔ Beginner-friendly implementation
+* Pie Charts
+* Feature Distribution
+* Correlation Heatmap
+* Category Plots
+* Count Plots
+* Statistical Summary
+* Feature Relationship Analysis
 
-✔ Well-commented notebook
-
-✔ Easy to understand
-
-✔ Suitable for learning Machine Learning fundamentals
-
----
-
-## 🔮 Future Enhancements
-
-- Hyperparameter Optimization
-- Cross Validation
-- Ensemble Learning Models
-- Streamlit Web Application
-- Flask API Deployment
-- Model Explainability (SHAP/LIME)
-- Docker Support
-- Cloud Deployment
-
+These visualizations help identify important predictors influencing heart attack risk.
 
 ---
 
-## 👨‍💻 Developed By
+# ⚖ Handling Imbalanced Data
 
-### **Tejas Vishnu Mantena**
+The original dataset contains significantly more low-risk samples than high-risk samples.
 
+To improve model learning, the dataset is balanced using:
 
+* **RandomOverSampler**
+* **MinMaxScaler**
+
+This helps reduce prediction bias and improves model generalization.
+
+---
+
+# 🤖 Machine Learning
+
+The project follows the standard supervised machine learning workflow:
+
+* Data Preparation
+* Feature Selection
+* Data Scaling
+* Model Training
+* Prediction
+* Performance Evaluation
+
+---
+
+# 📏 Evaluation Metrics
+
+The trained model can be evaluated using:
+
+* Accuracy
+* Precision
+* Recall
+* F1 Score
+* Confusion Matrix
+* ROC-AUC Score
+
+---
+
+# 💻 Tech Stack
+
+| Category         | Technologies        |
+| ---------------- | ------------------- |
+| Programming      | Python              |
+| Notebook         | Jupyter Notebook    |
+| Data Analysis    | Pandas, NumPy       |
+| Visualization    | Matplotlib, Seaborn |
+| Machine Learning | Scikit-learn        |
+| Data Balancing   | imbalanced-learn    |
+| Feature Scaling  | MinMaxScaler        |
+
+---
+
+# 🎯 Learning Outcomes
+
+Through this project, I gained practical experience in:
+
+* Data Cleaning
+* Feature Engineering
+* Data Visualization
+* Machine Learning Pipelines
+* Class Imbalance Handling
+* Feature Scaling
+* Medical Data Analysis
+* Model Evaluation
+* Predictive Analytics
+
+---
+
+# 🔮 Future Improvements
+
+* Hyperparameter Tuning
+* Cross Validation
+* Ensemble Models
+* XGBoost / LightGBM
+* Model Explainability (SHAP)
+* Streamlit Web Application
+* Flask/FastAPI Deployment
+* Docker Support
+* CI/CD Pipeline
+* Cloud Deployment (AWS/Azure)
+
+---
+
+# 👨‍💻 Author
+
+**Developed by Tejas Vishnu Mantena**
 
 ### Connect with me
 
-- 🌐 GitHub: https://github.com/TejasVishnuMantena
-- 💼 LinkedIn: https://www.linkedin.com/in/tejas-vishnu-mantena
+* 🔗 GitHub: https://github.com/TejasVishnuMantena
+* 💼 LinkedIn: https://www.linkedin.com/in/tejas-vishnu-mantena
 
 ---
 
-## ⭐ Support
+# ⭐ Support
 
-If you found this project helpful or interesting, consider giving it a ⭐ on GitHub.
+If you found this project useful, please consider giving it a ⭐ on GitHub.
 
-It motivates me to build and share more projects!
+Your support motivates me to build more Machine Learning and AI projects.
 
 ---
 
-<p align="center">
-Made using Python and Machine Learning
-</p>
